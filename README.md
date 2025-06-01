@@ -1,4 +1,4 @@
-# Dicoding Project
+# Dicoding Projects
 ## 🚀 Project Overview
 This repository contains my projects assignments from [Dicoding](https://www.dicoding.com/).
 ## 📊 Results & Reports
