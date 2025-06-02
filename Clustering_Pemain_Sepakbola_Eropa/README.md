@@ -1,5 +1,75 @@
-# 📊 European Football Players Clustering
+# ⚽ European Football Players Clustering
 ## 🧠 Project Overview
-This notebook contains a clustering analysis of football player statistics in major European leagues (season 2024–2025). Its main objectives are:
+This notebook contains a clustering analysis of football player statistics in major European leagues (season 2024–2025).
+## 🎯 Objectives
 - Conducting exploration on the “Football Players Stats (2024–2025)” dataset downloaded from [Kaggle](https://www.kaggle.com/).
-- Building a clustering model using K-Means
+- Building a clustering model using K-Means both before and after dimensionality reduction with Principal Component Analysis (PCA), to group players based on their statistical similarities.
+- Exploring cluster quality through Silhouette Score, Elbow Method metrics, and visualizations.
+- Analyze and interpret each cluster to understand the characteristics of player data in each cluster.
+## 📁 Dataset & References
+- [Football Players Stats (2024-2025)](https://www.kaggle.com/datasets/hubertsidorowicz/football-players-stats-2024-2025)
+- [Football players visualization](https://www.kaggle.com/code/quangnhatbui/football-players-visualization)
+## 🛠️ Methodology
+- Exploratory Data Analysis (EDA)
+  - Missing value and duplication analysis
+  - Distribution and correlation analysis
+  - Data visualization
+- Data Preprocessing
+  - Handling missing values ​​from previous analysis results by dropping, in goalkeeper statistics it will be filled with a value of 0
+  - Handling duplicate data by adopting from notebook [Football players visualization](https://www.kaggle.com/code/quangnhatbui/football-players-visualization)
+  - Feature normalization using MinMax Scaling
+- Clustering Model Development
+  - At the beginning I need to do a Silhouette Score visualization first to determine the right number of clusters.
+  - Then train and predict the data using K-Means Clustering.
+  - Evaluate model with Silhouette Score.
+  - The silhouette score obtained was around 0.3. Then re-cluster using the Elbow Method
+  - Evaluation results up to around 0.5, but this result still can't get close to 0.7, so then I will do Feature Selection
+  - Evaluation results up to around 0.6, then use Principal Component Analysis (PCA)
+    - First of all visualize the PCA Cumulative Variance
+    - Then fit transform PCA
+    - Evaluation results are not much different from before, but after this the PCA results will be used.
+  - Visualize Clustering results using bar charts, heatmaps, and radar charts
+- Analisis dan Interpretasi Hasil Cluster
+  - Creating a profile for each cluster
+  - Analysis of feature contributions to each PCA component
+  - analysis of the range of values ​​(min, max, mean, and std) of PCA components for each cluster and position
+  - Interpret the target
+## 📈 Results
+- Cluster Interpretation for FW
+  - Cluster 0:
+    - Role: Playmaking Forward
+    - Characteristics:
+      - Focus on touches, carries, progressive passing
+      - Low contribution to xG, Gls
+      - High in touches and carries, low in progression
+  - Cluster 1:
+    - Role: Goal Scorer
+    - Characteristics:
+      - High in expected goals (xG) and goals (Gls)
+      - Low in play development
+      - Moderate contribution in touches and ball carrying
+  - Cluster 2:
+    - Role: Complete Forward
+    - Characteristics:
+      - Balanced in touch, ball carrying and game development
+      - Moderate contribution in game progression
+      - Good goal scoring ability
+- Cluster Interpretation for MF
+  - Cluster 0:
+    - Role: Ball-Carrying Midfielder
+    - Characteristics:
+      - Very good in carrying the ball (Carries), low in tackles
+      - High in ball carrying progression (PrgC)
+      - Contributes in clearances and has a goal threat
+  - Cluster 1:
+    - Role: Box-to-Box Midfielder
+    - Characteristics:
+      - High in ball recovery (Recov), touches and ball carrying
+      - Contribution in ball carrying progression
+      - Possesses goal threat and clearances
+  - Cluster 2:
+    - Role: Defensive Midfielder
+    - Characteristics:
+      - High in ball recovery and tackles
+      - High in clearances and interceptions, low in key passes
+      - Contributes in clearances and build-up play
