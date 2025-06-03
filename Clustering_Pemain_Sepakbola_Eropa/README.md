@@ -73,3 +73,29 @@ This notebook contains a clustering analysis of football player statistics in ma
       - High in ball recovery and tackles
       - High in clearances and interceptions, low in key passes
       - Contributes in clearances and build-up play
+- Cluster Interpretation for DF
+  - Cluster 0:
+    - Role: Ball-Playing Defender
+    - Characteristics:
+      - High in ball recovery, touches and progressive passing
+      - High in clearance, low in ball progression
+      - Contributes to clearances and build-up play
+  - Cluster 1:
+    - Role: Hard-Tackling Defender
+    - Characteristics:
+      - Low on ball carrying, high on tackles and interceptions
+      - High on clearances
+      - Focus on defensive tasks, low on attacking progression
+- Cluster Interpretation for GK
+  - Cluster 0:
+    - Role: Ball-Playing Goalkeeper
+    - Characteristics:
+      - High in ball recovery, touches and progressive passing
+      - High in clearance
+      - Medium contribution in saves
+  - Cluster 1:
+    - Role: Shot-Stopping Goalkeeper
+    - Characteristics:
+      - Unggul dalam penyelamatan (Save%), clean sheets (CS%)
+      - Berkontribusi dalam clearance
+      - Kontribusi moderat dalam distribusi bola
