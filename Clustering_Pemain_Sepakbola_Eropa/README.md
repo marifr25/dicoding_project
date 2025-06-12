@@ -29,7 +29,7 @@ This notebook contains a clustering analysis of football player statistics in ma
     - Then fit transform PCA
     - Evaluation results are not much different from before, but after this the PCA results will be used.
   - Visualize Clustering results using bar charts, heatmaps, and radar charts
-- Analisis dan Interpretasi Hasil Cluster
+- Cluster Results Analysis and Interpretation
   - Creating a profile for each cluster
   - Analysis of feature contributions to each PCA component
   - analysis of the range of values ​​(min, max, mean, and std) of PCA components for each cluster and position
