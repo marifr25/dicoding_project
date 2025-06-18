@@ -96,6 +96,6 @@ This notebook contains a clustering analysis of football player statistics in ma
   - Cluster 1:
     - Role: Shot-Stopping Goalkeeper
     - Characteristics:
-      - Unggul dalam penyelamatan (Save%), clean sheets (CS%)
-      - Berkontribusi dalam clearance
-      - Kontribusi moderat dalam distribusi bola
+      - Excels in saves (Save%), clean sheets (CS%)
+      - Contributes to clearances
+      - Moderate contribution to ball distribution
